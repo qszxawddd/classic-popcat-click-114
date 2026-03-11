@@ -47,6 +47,25 @@
             <div class="cat-img" id="p">0</div>
             <div id="op"></div>
         </div>
+        <script>
+            let count = 0;
+            let catImg = document.getElementById('p');
+
+            function addCount() {
+                count++;
+                catImg.innerHTML = count;
+                catImg.id = 'op';
+                
+            }
+
+            function close() {
+                catImg.id = 'p';
+            }
+
+            document.addEventListener('pointerdown', addCount);
+            document.addEventListener('pointerup', close);
+
+        </script>
 
 
     </body>
